@@ -17,7 +17,7 @@ const Slot = function (canvas) {
   };
 
   this.setCredits = function () {
-    conf.player.money = conf.balance.value;
+    // conf.player.money = conf.balance.value;
 
     return this;
   };
@@ -26,15 +26,15 @@ const Slot = function (canvas) {
     conf.win.value = 0;
     conf.sound.spin.play();
     if (conf.player.money - conf.bet.value * 1 < 0) {
-      conf.sound.spin.currentTime = 0;
-      conf.sound.spin.pause();
-      alert('You dont have enough credits!');
-      auto = false;
+      // conf.sound.spin.currentTime = 0;
+      // conf.sound.spin.pause();
+      // alert('You dont have enough credits!');
+      // auto = false;
 
-      return;
+      // return;
     }
 
-    conf.balance.value = conf.player.money;
+    // conf.balance.value = conf.player.money;
     currentSpin = [];
     reels.forEach((reel) => {
       reel.clicked = true;
@@ -199,8 +199,7 @@ const Slot = function (canvas) {
       canvas.stroke();
     });
 
-    let totalSum = 10;
-    //sum.top + sum.middle + sum.bottom;
+    let totalSum = sum.top + sum.middle + sum.bottom;
 
     conf.totalWin.value = Number(conf.totalWin.value) + totalSum;
     if (totalSum !== 0) {
