@@ -1,0 +1,2 @@
+const Resources=function(n,t){if(t.document)return(...t)=>new n(t)}((function(n){const t=["png","jpg","jpeg"],o=[],e=[],i=[];n.forEach((n=>{const o=n.split("."),i=o[o.length-1];t.includes(i)&&e.push(n)})),this.onLoad=function(n){return"function"==typeof n&&o.push(n),this},function n(t=0){if(void 0===e[t])return void o.forEach((n=>n.call(this,i,e)));let c=new Image;c.src=e[t],c.addEventListener("load",(function(){i.push(c),n(++t)}))}(0)}),this);
+//# sourceMappingURL=index.d08b6deb.js.map
